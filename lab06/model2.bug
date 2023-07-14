@@ -1,0 +1,8 @@
+model {
+    # data likelihood
+    for (i in 1:length(X)) {
+        X[i] ~ dbern(p);
+    }
+    # Beta(1,10) prior
+    p ~ dbeta(5, 0.01);
+}
